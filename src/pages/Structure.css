@@ -1,0 +1,78 @@
+.structure-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 16px 64px 16px;
+}
+.structure-container h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #312e81;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.structure-intro {
+  text-align: center;
+  color: #6366f1;
+  font-size: 1.15rem;
+  margin-bottom: 36px;
+}
+.structure-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+}
+.structure-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #6366f122;
+  padding: 24px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.structure-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 32px #6366f144;
+}
+.structure-img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 12px #818cf855;
+}
+.structure-card h3 {
+  font-size: 1.3rem;
+  color: #312e81;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.structure-desc {
+  color: #334155;
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.structure-example {
+  color: #6366f1;
+  font-size: 0.98rem;
+  font-style: italic;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .structure-grid {
+    gap: 18px;
+  }
+  .structure-card {
+    padding: 14px 6px 12px 6px;
+  }
+  .structure-img {
+    width: 60px;
+    height: 60px;
+  }
+  .structure-container h2 {
+    font-size: 1.2rem;
+  }
+}
