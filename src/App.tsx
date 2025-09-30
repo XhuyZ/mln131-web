@@ -5,7 +5,7 @@ import Alliance from './pages/Alliance'
 import Gallery from './pages/Gallery'
 import About from './pages/About'
 import Layout from './components/Layout'
-import './App.css'
+import './App.css' // Đảm bảo import CSS tổng
 
 function App() {
   return (

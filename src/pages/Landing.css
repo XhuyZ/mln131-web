@@ -4,62 +4,66 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  background: linear-gradient(120deg, var(--color-background) 0%, #e0e7ff 100%); /* Giữ màu nền nhẹ nhàng */
+  font-family: var(--font-sans-serif);
 }
 .landing-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 50px; /* Tăng khoảng cách */
 }
 .landing-hero-img {
-  width: 160px;
-  height: 160px;
+  width: 180px; /* To hơn */
+  height: 180px;
   object-fit: contain;
-  margin-bottom: 24px;
-  filter: drop-shadow(0 4px 24px #6366f1aa);
+  margin-bottom: 30px;
+  filter: drop-shadow(0 6px 28px rgba(0, 0, 0, 0.3)); /* Shadow tối hơn, rõ hơn */
 }
 .landing-hero-content {
   text-align: center;
 }
 .landing-hero-content h1 {
-  font-size: 2.5rem;
+  font-family: var(--font-serif);
+  font-size: 2.8rem; /* Lớn hơn */
   font-weight: 800;
-  color: #312e81;
-  margin-bottom: 12px;
+  color: var(--color-primary-dark);
+  margin-bottom: 16px;
 }
 .landing-slogan {
-  font-size: 1.25rem;
-  color: #6366f1;
-  margin-bottom: 24px;
+  font-size: 1.3rem;
+  color: var(--color-accent);
+  margin-bottom: 30px;
   font-style: italic;
+  font-family: var(--font-serif); /* Slogan cũng dùng font serif */
 }
 .landing-btn {
   display: inline-block;
-  padding: 14px 36px;
-  background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
-  color: #fff;
-  font-size: 1.1rem;
+  padding: 16px 40px; /* To hơn */
+  background: linear-gradient(90deg, var(--color-accent) 0%, #d8b898 100%); /* Gradient vàng đồng */
+  color: var(--color-primary-dark);
+  font-size: 1.15rem;
   font-weight: 600;
-  border-radius: 32px;
+  border-radius: 36px; /* Bo tròn nhiều hơn */
   text-decoration: none;
-  box-shadow: 0 2px 16px #6366f155;
-  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
 }
 .landing-btn:hover {
-  background: linear-gradient(90deg, #818cf8 0%, #6366f1 100%);
-  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(90deg, #d8b898 0%, var(--color-accent) 100%);
+  transform: translateY(-3px) scale(1.05);
 }
 .landing-desc {
-  margin-top: 48px;
-  max-width: 600px;
+  margin-top: 60px; /* Tăng khoảng cách */
+  max-width: 700px; /* Rộng hơn một chút */
   text-align: center;
-  color: #334155;
-  font-size: 1.1rem;
-  background: #fff8;
-  border-radius: 16px;
-  padding: 24px 20px;
-  box-shadow: 0 2px 16px #6366f122;
+  color: var(--color-primary-dark);
+  font-size: 1.15rem;
+  background: var(--color-text-light); /* Nền trắng ngà */
+  border-radius: 20px; /* Bo tròn nhiều hơn */
+  padding: 30px 25px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  line-height: 1.6;
 }
 .landing-full {
   min-height: 80vh;
@@ -67,84 +71,104 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 32px;
+  padding-top: 40px;
 }
 .landing-nav-btns {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .landing-btn.big {
-  font-size: 1.15rem;
-  padding: 16px 36px;
-  margin: 0 4px 8px 4px;
+  font-size: 1.2rem;
+  padding: 18px 40px;
+  margin: 0 6px 10px 6px;
   border-radius: 40px;
-  background: linear-gradient(90deg, #818cf8 0%, #6366f1 100%);
-  color: #fff;
+  background: linear-gradient(90deg, var(--color-accent) 0%, #d8b898 100%);
+  color: var(--color-primary-dark);
   font-weight: 700;
-  box-shadow: 0 2px 16px #6366f155;
-  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
   text-decoration: none;
   display: inline-block;
 }
 .landing-btn.big:hover {
-  background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
-  transform: translateY(-2px) scale(1.04);
+  background: linear-gradient(90deg, #d8b898 0%, var(--color-accent) 100%);
+  transform: translateY(-3px) scale(1.05);
 }
 .landing-section {
-  margin-top: 48px;
-  max-width: 700px;
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px #6366f122;
-  padding: 32px 20px;
+  margin-top: 70px; /* Tăng khoảng cách */
+  max-width: 750px; /* Rộng hơn */
+  background: var(--color-text-light);
+  border-radius: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  padding: 40px 30px;
   text-align: center;
 }
 .landing-section h2 {
-  color: #312e81;
-  font-size: 1.3rem;
+  font-family: var(--font-serif);
+  color: var(--color-primary-dark);
+  font-size: 1.5rem;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
 }
 .landing-section ul {
-  list-style: disc inside;
-  color: #334155;
-  font-size: 1.08rem;
+  list-style: none; /* Bỏ bullet mặc định */
+  color: var(--color-primary-dark);
+  font-size: 1.1rem;
   margin: 0 auto;
   padding: 0;
   text-align: left;
-  max-width: 500px;
+  max-width: 550px;
 }
 .landing-section li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px; /* Khoảng trống cho icon */
 }
-@media (max-width: 600px) {
+.landing-section li::before { /* Thêm icon bullet tùy chỉnh */
+  content: "•"; /* Hoặc một biểu tượng unicode khác */
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  line-height: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .landing-hero-img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
   }
   .landing-hero-content h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+  }
+  .landing-slogan {
+    font-size: 1.1rem;
   }
   .landing-desc {
-    font-size: 1rem;
-    padding: 16px 8px;
+    font-size: 1.05rem;
+    padding: 20px 15px;
   }
-}
-@media (max-width: 700px) {
   .landing-full {
-    padding-top: 8px;
+    padding-top: 20px;
   }
   .landing-nav-btns {
-    gap: 8px;
+    gap: 12px;
   }
   .landing-btn.big {
-    font-size: 1rem;
-    padding: 10px 16px;
+    font-size: 1.05rem;
+    padding: 12px 24px;
   }
   .landing-section {
-    padding: 14px 4px;
+    padding: 25px 15px;
+  }
+  .landing-section h2 {
+    font-size: 1.3rem;
+  }
+  .landing-section ul {
+    font-size: 1rem;
   }
 }

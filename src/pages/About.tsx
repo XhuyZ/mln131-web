@@ -3,17 +3,17 @@ import './About.css'
 const members = [
   {
     name: 'Nguyễn Văn A',
-    role: 'Trưởng nhóm',
+    role: 'Nội dung & Phân tích',
     img: 'https://randomuser.me/api/portraits/men/32.jpg'
   },
   {
     name: 'Trần Thị B',
-    role: 'Thiết kế & Nội dung',
+    role: 'Thiết kế & Trực quan',
     img: 'https://randomuser.me/api/portraits/women/44.jpg'
   },
   {
     name: 'Lê Văn C',
-    role: 'Lập trình & Kỹ thuật',
+    role: 'Kỹ thuật & Phát triển',
     img: 'https://randomuser.me/api/portraits/men/65.jpg'
   },
 ]
@@ -21,9 +21,9 @@ const members = [
 export default function About() {
   return (
     <div className="about-container">
-      <h2>Về dự án & nhóm thực hiện</h2>
+      <h2>Về dự án và Nhóm thực hiện</h2>
       <p className="about-intro">
-        Website này được xây dựng nhằm trực quan hóa kiến thức về cơ cấu xã hội - giai cấp và liên minh giai cấp trong thời kỳ quá độ lên CNXH ở Việt Nam, phục vụ cho bài thuyết trình học thuật và truyền cảm hứng sáng tạo.
+        Dự án này được xây dựng nhằm mục đích trực quan hóa và phân tích sâu sắc về cơ cấu xã hội - giai cấp và liên minh giai cấp, tầng lớp trong thời kỳ quá độ lên Chủ nghĩa xã hội ở Việt Nam, phục vụ cho mục đích học tập, nghiên cứu và truyền cảm hứng.
       </p>
       <div className="about-members">
         {members.map(m => (
@@ -35,8 +35,8 @@ export default function About() {
         ))}
       </div>
       <div className="about-thanks">
-        <p><b>Xin cảm ơn thầy/cô và các bạn đã theo dõi!</b></p>
-        <p>Mọi ý kiến đóng góp xin gửi về nhóm để website ngày càng hoàn thiện hơn.</p>
+        <p><b>Xin chân thành cảm ơn quý Thầy/Cô và các bạn đã quan tâm theo dõi!</b></p>
+        <p>Mọi góp ý, nhận xét về nội dung và hình thức trình bày xin vui lòng gửi về nhóm để dự án được hoàn thiện hơn nữa.</p>
       </div>
     </div>
   )

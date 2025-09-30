@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  font-family: var(--font-sans-serif); /* Sử dụng font-sans-serif mặc định */
+  line-height: 1.6; /* Tăng line-height cho dễ đọc */
+  font-weight: 400;
+
+  color-scheme: light; /* Đặt mặc định là light mode */
+  color: var(--color-primary-dark); /* Màu chữ chính */
+  background-color: var(--color-background); /* Màu nền chính */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Định nghĩa biến màu và font ở đây để các component dùng chung */
+:root {
+  --color-primary-dark: #2a2a2a; /* Xám than đậm */
+  --color-primary-light: #4a4a4a; /* Xám than nhạt hơn */
+  --color-accent: #b08968; /* Vàng đồng nhẹ */
+  --color-text-light: #fdfdfd; /* Trắng ngà */
+  --color-background: #fcfcfc; /* Nền trắng hơi ấm */
+  --font-serif: "Merriweather", Georgia, serif; /* Font chữ có chân */
+  --font-sans-serif: "Lato", "Open Sans", Arial, sans-serif; /* Font chữ không chân */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+a {
+  font-weight: 500;
+  color: var(--color-accent); /* Màu link mặc định */
+  text-decoration: none; /* Bỏ gạch chân mặc định */
+}
+a:hover {
+  color: var(--color-primary-dark); /* Màu link khi hover */
 }
 
-.card {
-  padding: 2em;
+body {
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.read-the-docs {
-  color: #888;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif); /* Tiêu đề dùng font serif */
+  color: var(--color-primary-dark);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-primary-dark);
+  line-height: 1.6;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f0f0f0; /* Nền button mặc định */
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s, color 0.25s;
+}
+button:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto var(--color-accent);
+}
+
+/* Các style không dùng nữa có thể xóa */
+.logo, .card, .read-the-docs { /* Xóa hoặc tùy chỉnh */
+    display: none; /* Ví dụ: ẩn nếu không cần */
 }

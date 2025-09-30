@@ -5,43 +5,43 @@ import { motion, AnimatePresence } from 'framer-motion'
 const images = [
   {
     src: 'https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80',
-    title: 'Công nhân hiện đại',
-    desc: 'Công nhân trong dây chuyền sản xuất hiện đại, đại diện cho lực lượng sản xuất chủ lực.'
+    title: 'Người lao động chân chính',
+    desc: 'Bàn tay người lao động kiến tạo nên giá trị, là biểu tượng của sự nỗ lực và cống hiến.'
   },
   {
     src: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-    title: 'Nông dân đổi mới',
-    desc: 'Nông dân ứng dụng công nghệ cao vào sản xuất nông nghiệp.'
+    title: 'Hòa mình vào đất đai',
+    desc: 'Con người và thiên nhiên hòa quyện, phản ánh sự sống và chu kỳ vĩnh cửu của sản xuất nông nghiệp.'
   },
   {
     src: 'https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=600&q=80',
-    title: 'Trí thức trẻ',
-    desc: 'Trí thức trẻ nghiên cứu khoa học, đổi mới sáng tạo.'
+    title: 'Ánh sáng tri thức',
+    desc: 'Hình ảnh ẩn dụ về sự tìm tòi, khám phá và soi rọi của trí tuệ con người trong mọi lĩnh vực.'
   },
   {
     src: 'https://images.unsplash.com/photo-1515168833906-d2a3b82b3029?auto=format&fit=crop&w=600&q=80',
-    title: 'Doanh nhân khởi nghiệp',
-    desc: 'Doanh nhân trẻ, startup sáng tạo, góp phần phát triển kinh tế.'
+    title: 'Dấu ấn khởi nghiệp',
+    desc: 'Sự dũng cảm tạo ra cái mới, biểu thị tinh thần tiên phong và khả năng định hình tương lai kinh tế.'
   },
   {
     src: 'https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80',
-    title: 'Phụ nữ Việt Nam',
-    desc: 'Phụ nữ tham gia lao động, giữ vai trò quan trọng trong xã hội và gia đình.'
+    title: 'Sức mạnh mềm',
+    desc: 'Vẻ đẹp và ý chí của người phụ nữ, nguồn cảm hứng và trụ cột tinh thần của cộng đồng.'
   },
   {
     src: 'https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=600&q=80',
-    title: 'Thanh niên tình nguyện',
-    desc: 'Thanh niên tham gia hoạt động xã hội, xây dựng đất nước.'
+    title: 'Hy vọng của thế hệ',
+    desc: 'Thanh niên là dòng chảy của sức sống, là hạt mầm cho những ý tưởng và hành động cách tân.'
   },
   {
     src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80',
-    title: 'Đoàn kết dân tộc',
-    desc: 'Các tầng lớp xã hội cùng chung sức xây dựng đại đoàn kết.'
+    title: 'Vòng tròn đồng điệu',
+    desc: 'Sự đoàn kết như một dòng chảy vô tận, nơi các yếu tố khác biệt cùng tồn tại và phát triển.'
   },
   {
     src: 'https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80',
-    title: 'Hợp tác xã kiểu mới',
-    desc: 'Mô hình hợp tác xã nông nghiệp ứng dụng công nghệ cao.'
+    title: 'Giao hưởng phát triển',
+    desc: 'Sự hợp tác hài hòa giữa các yếu tố tạo nên một bản giao hưởng của sự tiến bộ và thịnh vượng.'
   },
 ]
 
@@ -49,7 +49,10 @@ export default function Gallery() {
   const [open, setOpen] = useState<number|null>(null)
   return (
     <div className="gallery-container">
-      <h2>Triển lãm hình ảnh &amp; dẫn chứng thực tiễn</h2>
+      <h2>Thư viện Hình ảnh &amp; Dẫn chứng Biểu tượng</h2>
+      <p className="gallery-intro">
+        Những hình ảnh dưới đây không chỉ là minh họa, mà là những biểu tượng trực quan, ẩn chứa các ý nghĩa sâu sắc về cơ cấu xã hội và sự liên kết.
+      </p>
       <motion.div className="gallery-grid" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7 }}>
         {images.map((img, idx) => (
           <motion.div
@@ -85,7 +88,7 @@ export default function Gallery() {
               <img src={images[open].src} alt={images[open].title} />
               <div className="gallery-modal-title">{images[open].title}</div>
               <div className="gallery-modal-desc">{images[open].desc}</div>
-              <button className="gallery-modal-close" onClick={() => setOpen(null)}>Đóng</button>
+              <button className="gallery-modal-close" onClick={() => setOpen(null)}>Chiêm nghiệm xong</button> {/* Nút đóng triết lý hơn */}
             </motion.div>
           </motion.div>
         )}

@@ -1,60 +1,105 @@
+/* Nút chuyển đến game */
+
+.go-to-game-btn {
+  margin-left: 24px;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 100%);
+  color: #222;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 28px;
+  font-family: var(--font-sans-serif);
+  font-size: 1.08rem;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+  outline: none;
+  align-self: center;
+}
+.go-to-game-btn:hover, .go-to-game-btn:focus {
+  background: linear-gradient(90deg, #ffd580 0%, #ffb347 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+}
+:root {
+@media (max-width: 768px) {
+  .go-to-game-btn {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 320px;
+    align-self: stretch;
+  }
+}
+  --color-primary-dark: #2a2a2a; /* Xám than đậm */
+  --color-primary-light: #4a4a4a; /* Xám than nhạt hơn */
+  --color-accent: #b08968; /* Vàng đồng nhẹ */
+  --color-text-light: #f5f5f5; /* Trắng ngà */
+  --color-background: #fdfdfd; /* Nền trắng hơi ấm */
+  --font-serif: "Merriweather", Georgia, serif;
+  --font-sans-serif: "Lato", "Open Sans", Arial, sans-serif;
+}
+
 .layout-root {
   min-height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  background: var(--color-background);
   box-sizing: border-box;
 }
 .layout-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #fff;
-  box-shadow: 0 2px 12px #6366f122;
+  background: var(--color-primary-dark);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  height: 64px;
+  height: 70px; /* Tăng chiều cao */
   width: 100%;
   box-sizing: border-box;
 }
 .layout-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 800;
-  font-size: 1.18rem;
-  color: #312e81;
+  gap: 12px;
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-accent); /* Màu vàng đồng */
 }
 .layout-logo img {
-  width: 36px;
-  height: 36px;
+  width: 40px; /* To hơn một chút */
+  height: 40px;
 }
 .layout-nav {
   display: flex;
-  gap: 18px;
+  gap: 20px;
 }
 .layout-nav a {
-  color: #6366f1;
+  font-family: var(--font-sans-serif);
+  color: var(--color-text-light);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1.05rem;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.18s, color 0.18s;
+  font-weight: 500;
+  font-size: 1.08rem;
+  padding: 10px 18px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
 }
 .layout-nav a.active, .layout-nav a:hover {
-  background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
-  color: #fff;
+  background: var(--color-accent);
+  color: var(--color-primary-dark);
 }
 .layout-main {
   flex: 1 1 auto;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 32px 12px 48px 12px;
+  padding: 40px 16px 60px 16px; /* Tăng padding */
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -62,34 +107,42 @@
   box-sizing: border-box;
 }
 .layout-footer {
-  background: #312e81;
-  color: #fff;
+  background: var(--color-primary-dark);
+  color: var(--color-text-light);
   text-align: center;
-  padding: 18px 8px 12px 8px;
-  font-size: 1.05rem;
-  border-radius: 16px 16px 0 0;
-  margin-top: 24px;
+  padding: 24px 16px 16px 16px; /* Tăng padding */
+  font-size: 0.95rem;
+  font-family: var(--font-sans-serif);
+  border-radius: 18px 18px 0 0; /* Bo tròn nhiều hơn */
+  margin-top: 32px; /* Tăng margin */
   width: 100%;
   box-sizing: border-box;
 }
-html, body, #root {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.layout-footer div:first-child {
+    margin-bottom: 8px;
 }
-@media (max-width: 700px) {
+
+/* Responsive adjustments */
+@media (max-width: 768px) { /* Điều chỉnh breakpoint */
   .layout-header {
     flex-direction: column;
     height: auto;
-    padding: 8px 4px;
-    gap: 6px;
+    padding: 12px 8px;
+    gap: 10px;
   }
   .layout-main {
-    padding: 12px 2px 24px 2px;
+    padding: 20px 8px 30px 8px;
   }
   .layout-logo span {
-    font-size: 1rem;
+    font-size: 1.1rem;
+  }
+  .layout-nav {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .layout-nav a {
+    padding: 8px 12px;
+    font-size: 0.95rem;
   }
 }
